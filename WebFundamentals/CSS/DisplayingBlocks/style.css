@@ -1,0 +1,60 @@
+/*CSS reset settings here*/
+*{
+ margin: 0px;
+ padding: 0px;
+}
+#wrapper{
+ width: 780px;
+ height: 720px;
+ background-color: #D4D2AE;
+ margin: 0px auto;
+ padding: 15px;
+ float:left;
+}
+#header{
+ height: 80px;
+ margin-top: 15px;
+ margin-bottom: -5px;
+ margin-left: 13%;
+}
+.headerImage{
+	width:115px;
+	height:55px;
+	display:inline;
+	float:left;
+	background-color:white;
+	margin-left:-5px;
+	margin-right:-5px;
+}
+h1{
+	
+	float:left;
+	margin-top: 40px;
+	margin-left:10px;
+	margin-right:10px;
+}
+#main_content{
+ height: 730px;
+ width: 760px;
+ float:left;
+ margin: 10px 0px 10px 10px;
+ padding-right:20px;
+}
+.image{
+ height: 140px;
+ width: 140px;
+ display: inline-block;
+ margin:1px;
+ border:3px black solid;
+}
+.red{
+	background-color: #F36870;
+}
+.blue{
+	background-color: #82B4EE;
+}
+img{
+ height: 114px;
+ width: 114px;
+ margin:15px;
+}

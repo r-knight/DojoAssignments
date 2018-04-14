@@ -1,0 +1,18 @@
+ Create a new repository on GITHUB and call it GitHubRepoAssignment
+[No Command Line or Git commands used]
+Created New Repository on GitHub
+ Open your terminal/command prompt, and create a GitHubRepoAssignment folder
+>cd test
+>mkdir GitHubRepoAssignment
+ Initialize a git repository in your GitHubRepoAssignment directory
+>cd GitHubRepoAssignment
+>git init
+ Make a readme.md in your GitHubRepoAssignment folder explaining its contents.
+>touch readme.md
+[Text file modified in Notepad++]
+ Do a status check to see the changes made, then add, commit and push your changes
+>git status
+>git add readme.md
+>git commit -m "Added readme.md to directory. This file contains information on this directory's contents"
+>git remote add origin https://github.com/r-knight/GitHubRepoAssignment.git
+>git push -u origin master

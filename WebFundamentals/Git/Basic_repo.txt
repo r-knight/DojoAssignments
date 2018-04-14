@@ -1,0 +1,39 @@
+ Create a new repo on GitHub and call it basic_repo
+[Created on GitHub. No command line arguments]
+ Create a local repository also called basic_repo
+>cd Desktop/
+>mkdir basic_repo
+>cd basic_repo
+>git init
+ Create some files inside your local repo and add some content on them
+>touch readme.txt
+>touch hello_world.html
+>touch styles.css
+>vi readme.txt
+[added text to readme in VI]
+>:wq
+>vi hello_world.html
+[added content to hello_world.html]
+>:wq
+ Add, commit, and push these changes to GitHub
+>git add readme.txt hello_world.html styles.css
+>git commit -m <comment>
+>git remote add origin <link>
+>get push -u origin master
+ Make some more changes to the local copy of your file and push them to GitHub
+>git checkout -b change_html
+>vi hello_world.html
+[edited hello_world.html]
+>:wq
+>git add hello_world.html
+>git commit -m <comment>
+>git push -u origin change_html
+[edited hello_world.html]
+>:wq
+>git add hello_world.html
+>git commit -m <comment>
+>git push -u origin change_html
+>git checkout master
+>git merge change_html
+>git commit -m <comment>
+>git push -u origin master
