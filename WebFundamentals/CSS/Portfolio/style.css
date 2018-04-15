@@ -1,0 +1,205 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*End of CSS reset*/
+
+
+#topBar{
+	height:25px;
+	width:905px;
+	background-color:#FDFDFD;
+	position:relative;
+	padding: 20px 40px 20px 25px;
+}
+h1{
+	font-size:190%;
+	font-weight: bold;
+	font-family:"Comic Sans MS", cursive, sans-serif;
+	display: inline-block;
+	position:absolute;
+	left:35px;
+	top:23px;
+}
+h2{
+	font-size: 140%;
+	font-weight: bold;
+	font-family:Arial, Helvetica, sans-serif;
+	display:inline-block;
+	position:absolute;
+	right:40px;
+	top:30px;
+}
+#wrapper{
+	height: 900px;
+	width: 940px;
+	background: linear-gradient(to right, #4A363E, #6F5964, #4A363E);
+	position:relative;
+	padding:5px 15px;
+}
+#portrait{
+	width:400px;
+	height:265px;
+	position:relative;
+	background-color: white;
+	border: 5px solid grey;
+	margin: 10px;
+	display: inline-block;
+}
+#portrait img{
+	width:401px;
+	height:265px;
+	position:relative;
+	margin-left:-1px;
+}
+#about{
+	width:485px;
+	height:275px;
+	position:relative;
+	background-color: white;
+	margin: 10px;
+	display: inline-block;
+	vertical-align:top;
+}
+#about p{
+	margin:10px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#about, .project{
+	background: linear-gradient(to right, #F8F5F8, #DDD0DD)
+}
+.project{
+	width:290px;
+	height:550px;
+	position:relative;
+	background-color: white;
+	margin: 10px;
+	display: inline-block;
+}
+.project p{
+	text-align:justify;
+	padding:5px;
+}
+h3{
+	height:40px;
+	background: linear-gradient(#ADACB1,#878693,#ADACB1);
+}
+h3 span{
+	position:relative;
+	top:12px;
+	left:15px;
+	color:white;
+	font-weight:bold;
+	font-size:120%;
+}
+h4{
+	width: inherit;
+	text-align:center;
+}
+h4 span{
+	display:inline-block;
+	position:relative;
+	background-color: #407D61;
+	color: white;
+	border-radius:5px;
+	padding: 3px;
+	font-size:90%;
+	border:1px solid black;
+}
+
+.project img{
+	width: inherit;
+	height:148px;
+	border: 1px solid gray;
+	border-left: 0;
+	border-right: 0;
+}
+.project p{
+	height:160px;
+}
+.technologies img{
+	position:relative;
+	width:40px;
+	height:40px;
+	display: inline-block;
+	margin: 10px 5px 5px 5px;
+	border:0;
+}
+#bottomBar{
+	height:55px;
+	width:970px;
+	background-color:#FDFDFD;
+	position:relative;
+	padding-top:10px;
+}
+#bottomBar img{
+	position:relative;
+	width:20px;
+	height:20px;
+	margin:3px;
+	top:9px;
+	display:inline-block;
+}
+#bottomBar a{
+	color:black;
+	font-style:italic;
+	margin-left:1px;
+	display:inline-block;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight: lighter;
+	font-size:90%;
+}
+#bottomBar p{
+	text-align:center;
+}
+#bottomBar span{
+	text-align:center;
+}
+#socialMedia{
+	margin-left: 315px;
+}

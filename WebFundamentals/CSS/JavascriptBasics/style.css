@@ -1,0 +1,144 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*CSS reset settings here*/
+*{
+ margin: 0px;
+ padding: 0px;
+}
+#wrapper{
+ width: 950px;
+ height: 595px;
+ background-color: #1C335D;
+ position:relative;
+ padding: 5px;
+ left: 0px;
+ top: 0px;
+}
+#header{
+ height: 70px;
+ background-color:#CF2F36;
+ border-radius: 15px;
+ position:relative;
+}
+h1{
+ position:relative;
+ top: 20px;
+ left: 10px;
+ color: #C3CBE0;
+}
+h2{
+	color: #C3CBE0;
+}
+
+#main_content{
+ height: 395px;
+ width: 720px;
+ margin: 10px 0px 10px 10px;
+ border-radius: 20px;
+ background-color: #0E1822;
+ padding: 30px 15px 10px 10px;
+ position:relative;
+ display:inline-block;
+}
+#sidebar{
+ height: 190px;
+ width: 165px;
+ background-color: #2A7D8C;
+ position:relative;
+ padding: 12px 10px 0px 10px;
+ margin-right:5px;
+ top:-215px;
+ display:inline-block;
+ border-radius:20px;
+}
+
+#bottom-bar{
+height: 20px;	
+background-color: #5D6673;
+position:relative;
+padding:20px;
+top:5px;
+
+border-radius:20px;	
+}
+.nav{
+	position:relative;
+	left:20px;
+}
+.nested{
+	position:relative;
+	left:25px;
+}
+
+li{
+	color:white;
+}
+
+#sidebar a{
+	margin-left:5px;
+	font-size:12px;
+}	
+a{
+	color:#53C1DA;
+}
+
+p{
+	color: #C3CBE0;
+}
+
+#main_content p{
+	font-size:13px;
+	margin:5px 10px 5px 0px;
+}
+#main_content li{
+	margin-right: 25px;
+}
+#main_content ul{
+	margin-left:0px;
+}
+span{
+	color:#4987CF;	
+}
