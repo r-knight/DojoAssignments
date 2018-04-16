@@ -1,0 +1,236 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*End of CSS reset*/
+
+#wrapper{
+	width:970px;
+}
+#topBar{
+	margin:5px;
+}
+img{
+	width:40%;
+	height:40%;
+	display:inline-block;
+	vertical-align:top;
+}
+#topRight{
+	display:inline-block;
+	vertical-align:top;
+	position:relative;
+	right:-37%;
+	font-size:105%;
+}
+#topRight a{
+	color:gold;
+}
+#textSize span{
+	color:black;
+}
+#searchWrapper{
+	padding:15px 35px 20px 33px;
+	margin-top:5px;
+	width:inherit;
+	height:25px;
+	background-color:#444444;
+	border-radius:10px;
+	position:relative;
+	left:-80px;
+    box-shadow: 2px 2px #1F1F1F;
+}
+#searchWrapper input{
+	height:25px;
+	border:2px solid #9A9A9A;
+	border-bottom-color: #EEEEEE;
+	border-right-color: #EEEEEE;
+	text-align: center;
+}
+#searchWrapper a{
+	height:25px;
+	color:white;
+	background-color: #245076;
+	padding: 4px 7px 6px 7px;
+	border-radius:5px;
+	border:2px solid #C0C0C0;
+	border-bottom-color: #6C6C6C;
+	border-right-color: #6C6C6C;
+	text-decoration:none;
+	position:relative;
+	top:-1px;
+	left:4px;
+	font-size:80%;
+}
+#ribbon{
+	margin-bottom:25px;
+	width:82%;
+	height:35px;
+	margin-left:7%;
+	padding: 0px 5px 0px 50px;
+	background-color:#477EAD;
+	border-radius:5px;
+	text-align:left;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
+}
+#ribbon a{
+	font-size:110%;
+	margin-right: 56px;
+	color:white;
+	text-decoration:none;
+	position:relative;
+	top:10px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#mainContent{
+	background-color:#245076;
+	color:white;
+	padding-bottom:25px;
+	padding-top:5px;
+}
+#mainContent ul{
+	display:inline-block;
+	vertical-align:top;
+	width:20%;
+	margin-left:7%;
+	font-size:110%;
+	text-align:center;
+}
+#mainContent ul li{
+	margin-bottom:10px;
+	list-style-type:square;
+	list-style-position:inside;
+	color:gold;
+}
+
+#mainContent ul li a{
+	color:white;
+	font-size:90%;
+}
+#about{
+	display:inline-block;
+	width:60%;
+	text-align:center;
+	margin-left:5%;
+}
+#about p{
+	font-size:95%
+}
+#about h2{
+	font-size:105%;
+	position:relative;
+	left:-10px;
+}
+
+#about ul{
+	width:100%;
+	margin-left:0%;
+	margin-bottom:5px;
+}
+#about ul li{
+	margin-bottom:5px;
+	font-style: italic;
+	color: gold;
+	list-style-type:none;
+	margin-left:-20px;
+}
+#secondaryContent{
+	margin-top:25px;
+	margin-bottom:20px;
+	text-align: center;
+}
+h4{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	margin-top: 5px;
+}
+.category{
+	width:35%;
+	display:inline-block;
+	vertical-align:top;
+	border-top:3px solid #75A8D3;
+	margin-left:50px;
+	padding-left:15px;
+	padding-right:60px;
+}
+.category a{
+	text-decoration: none;
+}
+.category p {
+	width:88%;
+	margin: 5px 10px;
+}
+.category ul{
+	width:76%;
+	margin-left:14%;
+}
+.category li{
+	list-style-type:square;
+	list-style-position:outside;
+	margin-left: 0px;
+}
+#footer{
+	height:35px;
+	padding-top:40px;
+	text-align:center;
+	background:linear-gradient(#245076, #3675A9);
+	color: #7DAFD9;
+	font-size:75%;
+}
+#footer a, .category a{
+	color:#7DAFD9;
+}
+
+#footer a{
+	position:relative;
+	top:-10px;
+	margin-left:50px;
+	font-size:150%;
+	text-decoration:none;	
+}
