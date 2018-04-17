@@ -1,0 +1,143 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*End of CSS reset*/
+
+#wrapper{
+	width:950px;
+	margin: 0px 25px;
+	background-color: #DDDFD4;
+	padding: 15px;
+}
+a, p, h1{
+	font-family:"Courier New", Courier, monospace;
+}
+#topBar{
+	background-color: #3FB0AC;
+	padding:10px;
+	margin-bottom: 10px;
+}
+#topBar img{
+	display:inline-block;
+	vertical-align:top;
+	background-color: #DDDFD4;
+	mix-blend-mode: multiply;
+	width:4%;
+	height:4%;
+}
+#topBar h1{
+	display:inline-block;
+	vertical-align:top;
+	margin-top:8px;
+	width:25%;
+	font-weight:Bold;
+	font-size:180%;
+}
+#topBar a{
+	display:inline-block;
+	vertical-align:top;
+	margin-top:17px;
+	margin-left:10px;
+	color:white;
+	font-size:85%
+}
+
+#content{
+	background-color: #FAE596;
+	margin:10px 0px;
+	height:600px;
+	padding:10px 0px 10px 10px;
+}
+
+#content p{
+	background-color: #173F43;
+	color: #DDDFD4;
+	display: inline-block;
+	padding: 10px 25px 15px 20px;
+	margin:10px;
+	vertical-align: top;
+	font-size:90%;
+    line-height: 16px;
+}
+.contentHeader{
+	font-size: 125%;
+	font-weight:bold;
+	position:relative;
+	left:-10px;
+}
+.command{
+	color: #55DBCB;
+}
+#left, #innerContent{
+	display:inline-block;
+	height:560px;
+	
+}
+#left{
+	width:20%;
+}
+#innerContent{
+	display:inline-block;
+	width: 70%;
+}
+.bottomRow, .topRow, .middleRow{
+	height:156px;
+}
+.topRow{
+	width:23.05%;
+}
+.middleRow{
+	width:39.80%;
+}
+#footer{
+	background-color: #3FB0AC;
+	padding:30px;
+	text-align:center;
+	font-weight:bold;
+}
