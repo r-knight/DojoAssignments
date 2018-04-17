@@ -4,47 +4,44 @@
  padding: 0px;
 }
 #wrapper{
- width: 950px;
+ width: 920px;
  height: 610px;
  background-color: silver;
  margin: 0px auto;
- padding: 15px 20px 0px 20px;
+ padding: 15px 15px 0px 15px;
  float:left;
 }
 #header{
  height: 150px;
  background-color: green;
- margin-bottom: 15px;
+ margin-bottom: 20px;
 }
 #navigation{
  height: 300px;
  width: 200px;
  background-color: blue;
  display:inline-block;
- margin: 10px 10px 10px 0px;
+ margin: 0px 10px 10px 0px;
  vertical-align:top;
 }
 #main_content{
  height: 400px;
- width: 680px;
+ width: 700px;
  background-color: red;
+ margin: 0px 0px 10px 5px;
  display:inline-block;
- margin: 10px 0px 10px 15px;
- padding:0px 35px 10px 5px;
  vertical-align:top;
 }
 .subcontents{
  height: 200px;
  width: 210px;
- margin: 15px 0px 10px 15px;
+ margin: 12px -2px 0px 12px;
  background-color: yellow;
  display: inline-block;
- float:left;
 }
 #advertisement{
  height: 120px;
  width: 660px;
- margin: 15px;
+ margin: 20px 15px 15px 12px;
  background-color: purple;
- float:left;
 }
