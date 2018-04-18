@@ -51,30 +51,45 @@ table {
 body{
 	font-family: Arial, Helvetica, Sans Serif;
 }
-table{
-	vertical-align:top;
-	color:red;
-	text-align: center;
-	border-collapse:separate;
-	empty-cells:hide;
+#wrapper{
+	margin:5px;
+}
+.mainTable{
 	margin:10px;
-	table-layout:fixed;
-	border-spacing:5px 3px;
+	display:inline-grid;
+	grid-template-columns: 60px repeat(18, 65px);
+	grid-template-rows: repeat(8, 55px) 25px repeat(2, 55px);
+	grid-template-areas:
+		"label 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+		"rowNumber 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+		"rowNumber 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+		"rowNumber 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+		"rowNumber 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+		"rowNumber 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+		"rowNumber 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+		"rowNumber 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+		"gap gap gap gap gap gap gap gap gap gap gap gap gap gap gap gap gap gap gap"
+		"lanthanoids 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+		"actanoids 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18";
+	grid-column-gap: 5px;
+	grid-row-gap: 3px;
 }
-th, td{
-	height:59px;
-	width:59px;
-	padding:1px;
+
+.element{
+	border:2px solid gray;
+	text-align:center;
 }
-td{
-	border: 2px solid gray;
+.lanthAct, .rowLabel, .colLabel, .asterisk{
+	color:red;
 }
-.axis{
-	position:relative;
-	top:5px;
+.rowLabel, .colLabel{
+	text-align: center;
 }
-tbody td{
-	color:black;
+.asterisk{
+	text-align:right;
+}
+.asterisk, .lanthAct{
+	margin-top:20px;
 }
 .rowNum{
 	color:red;
@@ -87,33 +102,15 @@ tbody td{
 	font-weight:bold;
 	font-size:110%;
 }
-tbody tr td:nth-child(n+14):nth-child(-n+19){
-	background-color:#FECB00;
-}
-tbody tr td:nth-child(n+4):nth-child(-n+13){
-	background-color:#FD9A98;
-}
-tbody tr td:nth-child(n+2):nth-child(-n+3){
+.sBlock{
 	background-color:#689BFF;
 }
-.lanthAct{
-	margin-left:47px;
-	margin-top:25px;
+.dBlock{
+	background-color:#FD9A98;	
 }
-.lanthAct tbody tr td:nth-child(n+3):nth-child(-n+16){
+.pBlock{
+	background-color:#FECB00;
+}
+.fBlock{
 	background-color:#1FCA21;
-}
-.lanthAct tr td:first-child{
-	position:relative;
-	left:10px;
-	background-color:white;
-}
-.lanthAct tr td:nth-child(2){
-	border:none;
-	color:red;
-	text-align:right;
-	background-color:white !important;
-	position:relative;
-	top:23px;
-	left:5px;
 }
