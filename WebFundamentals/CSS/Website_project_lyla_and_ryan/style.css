@@ -1,0 +1,161 @@
+/*CSS reset settings here*/
+*{
+ margin: 0px;
+ padding: 0px;
+}
+
+#wrapper{
+	width:1280px;
+	height:720px;
+}
+#search{
+	background-color: #D32323;
+	width:1280px;
+	height:50px;
+	margin-left:30px;
+}
+
+#main{
+	background-color: #F5F5F5;
+	width:1280px;
+	height:400px;
+	margin-left:30px;
+}
+
+#secondary{
+	background-color: #FFFFFF;
+	width:1280px;
+	height:220px;
+}
+
+.subcontents{
+	display:inline-block;
+}
+
+#search .subcontents{
+	width:1200px;
+	height:40px;
+}
+
+#logo, #searchBar, #loginButton{
+	height:30px;
+	display:inline-block;
+	vertical-align:top;
+}
+#logo{
+	width: 75px;
+}
+#searchBar{
+	width: 700px;
+	position:relative;
+}
+#loginButton{
+	width:75px;
+}
+.navBar{
+	background:#BD1F1F;
+	margin-left:5px;
+}
+.navBar li{
+	display:inline;
+	margin-right: 30px;
+	color:white;
+}
+
+#main .subcontents{
+	width:600px;
+	height:100px;
+	vertical-align:top;
+}
+
+.overview p, .overview img, .overview a{
+	display:inline-block;
+	vertical-align:top;
+}
+
+.overviewName{
+	font-weight:bold;
+	font-size:200%;
+}
+.verified{
+	width:10%;
+	height:10%;
+}
+.rating{
+	width:10%;
+	height:10%;
+}
+.details{
+	width:7.5%;
+	height:7.5%;
+}
+.buttons{
+	margin-top:30px;
+}
+.buttons li{
+	display:inline;
+	background-color:pink;
+	border:1px solid gray;
+	margin-left:0px;
+}
+.writeReview{
+	padding:8px 8px;
+	height:30px;
+	background-color:red;
+}
+.carousel img{
+	display:inline-block;
+}
+.directions{
+	width:275px;
+	height:275px;
+	position:relative;
+	top:25px;
+}
+.userSubmitted{
+	width:225px;
+	height:225px;
+}
+#secondary div{
+	display:inline-block;
+	vertical-align:top;
+	height:80px;
+}
+
+.userReviews{
+	width:700px;
+	height:80px;
+	margin-top:30px;
+	margin-left:30px;
+}
+.lower-right{
+	width:200px;
+}
+.ad{
+	height:40px;
+	padding:10px;
+	background-color: #F5F5F5;
+	width:650px;
+}
+.ad img, .ad a, .ad p{
+	display:inline-block;
+	vertical-align:top;
+}
+
+.ad img{
+	width:40px;
+	height:40px;
+}
+.userProfile, .userReview{
+	display:inline-block;
+	vertical-align:top;
+	margin-bottom: 20px;
+}
+
+.userReview{
+	width:630px;
+}
+.quickView{
+	list-style-type:none;
+	margin-top:30px;
+}
