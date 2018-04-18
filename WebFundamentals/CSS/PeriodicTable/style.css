@@ -57,22 +57,22 @@ body{
 .mainTable{
 	margin:10px;
 	display:inline-grid;
-	grid-template-columns: 60px repeat(18, 65px);
+	grid-template-columns: 60px repeat(2, 65px) 12px repeat(16, 65px);
 	grid-template-rows: repeat(8, 55px) 25px repeat(2, 55px);
 	grid-template-areas:
-		"label 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
-		"rowNumber 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
-		"rowNumber 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
-		"rowNumber 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
-		"rowNumber 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
-		"rowNumber 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
-		"rowNumber 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
-		"rowNumber 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
-		"gap gap gap gap gap gap gap gap gap gap gap gap gap gap gap gap gap gap gap"
-		"lanthanoids 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
-		"actanoids 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18";
-	grid-column-gap: 5px;
-	grid-row-gap: 3px;
+		"label 1 2 . 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+		"rowNumber 1 2 . 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+		"rowNumber 1 2 . 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+		"rowNumber 1 2 . 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+		"rowNumber 1 2 . 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+		"rowNumber 1 2 . 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+		"rowNumber 1 2 . 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+		"rowNumber 1 2 . 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+		"gap gap gap . gap gap gap gap gap gap gap gap gap gap gap gap gap gap gap gap"
+		"asterisk lanthanoids . asterisk 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+		"asterisk actinoids . asterisk 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18";
+	grid-column-gap: 2px;
+	grid-row-gap: 2px;
 }
 
 .element{
