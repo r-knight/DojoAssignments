@@ -173,6 +173,16 @@ a{
 	width:75%;
 	margin-left: 8%;
 }
+.adArrows{
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #C3C3C3), color-stop(0.65, #CCCCCC), color-stop(1, #FFFFFF) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #C3C3C3), (0.65, #CCCCCC ), color-stop(1, #FFFFFF) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size:75%;
+  position:relative;
+  top:-1px;
+}
 #mainContent{
 	width: 71%;
 	display:inline-block;
