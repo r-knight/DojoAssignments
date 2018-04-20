@@ -1,0 +1,55 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+p{
+	width:300px;
+	background-color: white;
+}
+img{
+	width:400px;
+	height:320px;
+	margin-bottom:0px;
+}
+.section p{
+	background-color:silver;
+}
+.button{
+	background-color: silver !important;
+	width:120px;
+	border-radius:3px;
+	text-align:center;
+	border:1px solid black;
+}
+.navBar{
+	list-style-type: none;
+	margin: 0;
+	padding:0;
+}
+.navBar li{
+	display:inline;
+}
+.navbar p{
+	background-color:white;
+}
+
+.section{
+	margin:20px;
+	background-color: silver;
+	min-height:50px;
+	width:400px;
+	display: inline-block;
+	vertical-align:top;
+	border:3px solid gray;
+}
+.secretButton{
+	width:30px;
+	height:30px;
+	margin-left:387px;
+	display:inline-block;
+}
+
+.blueBackground{
+	background-color:blue;
+}

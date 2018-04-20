@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Functions Practice Page</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('h1').click(function(){
+				alert("ouch!");
+				$('h1').text("I can't believe you've done this.");
+			});
+			$('.navBar p').click(function(){
+				alert("You're mean. I'm going away now :(");
+				$('.noBully').hide();
+			});
+			$('.hidden').hide()
+			$('.boop').hide()
+			$('.secretButton').click(function(){
+				alert("You found me!");
+				$('.hidden').show();
+			});
+			$('#firstSection .button').click(function(){
+				$('#firstSection').addClass("blueBackground");
+				$('#firstSection').html("<h2 class ='functionName'>You added the 'blueBackground' class to this section!</h2>");
+			});
+			$('#secondSection .button').click(function(){
+				$('#secondSection').append("<p>ow<p>");
+			});
+			$('#thirdSection .button').click(function(){
+				$('#thirdSection').html("<h5>Look at me, I'm smaller now!</h5><p class = 'newButton'> no more clicking for you. In this section anwyay...</p>")
+				$('#fourthSection .hidden').slideDown("slow", function(){
+				});
+			});
+			$('#fourthSection .button').click(function(){
+				$('#fourthSection .functionDescription').fadeOut("slow",function(){});
+			});
+			$('#fifthSection .toggleButton').click(function(){
+				$('.toggle').toggle(1000,function(){});
+			});
+			$('#fifthSection .slideToggle').click(function(){
+				$('.toggle').slideToggle(1000,function(){});
+			});
+			$('#sixthSection > .button:first').click(function(){
+				$('#sixthSection .hidden').fadeIn(1000,function(){});
+			});
+			$('#sixthSection .before').click(function(){
+				$('#sixthSection').before("<p>This text is being added before the button's section</p>");
+			});
+			$('#sixthSection .after').click(function(){
+				$('#sixthSection').after("<p>This text is being added before the button's section</p>");
+			});
+			$('#seventhSection > .button:first').click(function(){
+				$("#doggo").attr("alt","no, really, this is a dog");
+			});
+			$('#seventhSection > .button:first').click(function(){
+				$("#doggo").val("alt","no, really, this is a dog");
+			});
+			$('#seventhSection > .button:first').click(function(){
+				$("#doggo").attr("alt","no, really, this is a dog");
+			});
+			$('#seventhSection .valButton').click(function(){
+				alert($("#valueTest").val())				
+			});
+			$('#seventhSection .addData').click(function(){
+				$("body").data("foo", 32);		
+			});
+			$('#seventhSection .checkData').click(function(){
+				alert($("body").data("foo"));
+			});
+			$('.button').click(function(){
+				$('a').slideUp("slow", function(){});
+			});
+		
+		
+		});
+
+		</script>
+	</head>
+	<body>
+		<div class = "wrapper">
+			<div class = "header">
+				<h1 class = "title">This is my first jQuery assignment! CLICK THIS TITLE!</h1>
+				<ul class = "navBar">
+					<li><a href="">Home</a></li>
+					<li><a href="">About</a></li>
+					<li><p class = "noBully">pls no bully<p></li>
+					<li><p class = "hidden">shhh, I'm hiding from QA</p></li>
+				</ul>
+			</div>
+			<div class = "content">
+				<div class ="section" id = "firstSection">
+					<h2 class ="functionName">AddClass</h2>
+					<p class = "button">AddClass</p>
+					<p class = "functionDescription">Click the button to do a thing</p>
+				</div>
+				<div class ="section" id = "secondSection">
+					<h2 class ="functionName">Append</h2>
+					<p class = "button">Append</p>
+					<p class = "functionDescription">Click the button to do a thing</p>
+				</div>
+				<div class ="section" id = "thirdSection">
+					<h2 class ="functionName">HTML, and one more..</h2>
+					<p class = "button">Change html!</p>
+					<p class = "functionDescription">Click the button to do a thing</p>
+				</div>
+				<div class ="section" id = "fourthSection">
+					<h2 class ="functionName">What, no button?</h2>
+					<p class = "hidden button">fadeOut</p>
+					<p class = "functionDescription">Click the button to do a thing</p>
+				</div>
+				<div class ="section" id = "fifthSection">
+					<h2 class ="functionName">Toggles</h2>
+					<p class = "button toggleButton">Toggle</p>
+					<p class = "button slideToggle">Slide Toggle</p>
+					<p class = "functionDescription">Click the button to do a thing</p>
+					<p class = "toggle beep">Beep</p>
+					<p>&nbsp;</p>
+					<p class = "toggle boop">Boop</p>
+				</div>
+				<div class ="section" id = "sixthSection">
+					<h2 class ="functionName">fadeIn and before/after</h2>
+					<p class = "button">fadeIn</p>
+					<p class = "before button">before</p>
+					<p class = "after button">after</p>
+					<p class = "functionDescription">Click the button to do a thing</p>
+					<p class = "hidden"> fade in?</p>
+				</div>
+				<div class ="section" id = "seventhSection">
+					<h2 class ="functionName">Data, Value, and Attr</h2>
+					<p class = "button">Attr</p>
+					<input id="valueTest" placeholder = "Value test" type = "text">
+					<p class = "changedText"> Enter text and click "Val"</p>
+					<p class = "valButton button">Val</p>
+					<p class = "addData button">Add data</p>
+					<p class = "checkData button">Check data</p>
+					<p class = "functionDescription">Click the button to do a thing</p>
+					<img src = "images/doggo.jpg" id = "doggo" alt = "This is a dog">
+				</div>
+			<div class = "secretButton"></div>
+		</div>
+	</body>
+</html>

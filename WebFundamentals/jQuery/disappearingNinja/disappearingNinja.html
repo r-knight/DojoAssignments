@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src= 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Disappearing Dogs</title>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){
+		
+		$('img').click(function(){
+			$(this).hide();
+		
+		});
+		$('.restore').click(function(){
+			$('img').show();
+		
+		});
+		});
+	</script>
+	<div class = "wrapper">
+		<h2>jQuery - assignment 1</h2>
+		<div class = "gameWindow">
+			<div>
+				<img src ="doggo.jpg" alt = "dog">
+			</div>
+			<div>
+				<img src ="doggo.jpg" alt = "dog">
+			</div>
+			<div>
+				<img src ="doggo.jpg" alt = "dog">
+			</div>
+			<div>
+				<img src ="doggo.jpg" alt = "dog">
+			</div>
+			<div>
+				<img src ="doggo.jpg" alt = "dog">
+			</div>
+			<div>
+				<img src ="doggo.jpg" alt = "dog">
+			</div>
+			<div>
+				<img src ="doggo.jpg" alt = "dog">
+			</div>
+			<div>
+				<img src ="doggo.jpg" alt = "dog">
+			</div>
+		</div>
+		<p class = "restore">Restore</p>
+	</div>
+</body>
+</html>
