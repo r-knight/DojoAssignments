@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src= 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Hover Images</title>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){		
+	
+			$('img').hover(
+				function(){
+					var temp = $(this).attr('src');
+					$(this).attr('src',$(this).attr('data-alt-src'));
+					$(this).attr('data-alt-src', temp);
+				}, function() {
+					var temp = $(this).attr('src');
+					$(this).attr('src',$(this).attr('data-alt-src'));
+					$(this).attr('data-alt-src', temp);
+				}
+			);
+		});
+	</script>
+	<div class = "wrapper">
+		<div class = "gameWindow">
+			<div>
+				<img src ="images/doggo.jpg" data-alt-src = "images/face.jpg" alt = "dog">
+			</div>
+			<div>
+				<img src ="images/doggo.jpg" data-alt-src = "images/aqua.jpg" alt = "dog">
+			</div>
+			<div>
+				<img src ="images/doggo.jpg" data-alt-src = "images/brighter.jpg" alt = "dog">
+			</div>
+			<div>
+				<img src ="images/doggo.jpg" data-alt-src = "images/darker.jpg" alt = "dog">
+			</div>
+			<div>
+				<img src ="images/doggo.jpg" data-alt-src = "images/face.jpg" alt = "dog">
+			</div>
+			<div>
+				<img src ="images/doggo.jpg" data-alt-src = "images/darker.jpg" alt = "dog">
+			</div>
+			<div>
+				<img src ="images/doggo.jpg" data-alt-src = "images/brighter.jpg" alt = "dog">
+			</div>
+			<div>
+				<img src ="images/doggo.jpg" data-alt-src = "images/aqua.jpg" alt = "dog">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

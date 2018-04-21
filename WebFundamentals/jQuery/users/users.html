@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src= 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Users</title>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$('#formSubmit').click(function(){
+				var fName = $('#firstName').val();
+				var lastName = $('#lastName').val();
+				var email = $('#emailAddress').val();
+				var cNumber = $('#contactNumber').val();
+				if (fName && email && cNumber && lastName){
+					$('#users').append("<tr><td class='firstNameTD'>"+fName+"</td><td class='lastNameTD'>"+lastName+"</td><td class='emailAddressTD'>"+email+"</td><td class='contactNumberTD'>"+cNumber+"</td></tr>");
+				}
+				return false;
+			});
+				
+				
+				
+		});
+	</script>
+	<div class = "wrapper">
+		<table class = "userInfo">
+			<thead>
+				<tr>
+					<th class = "firstNameTH">First Name</th>
+					<th class = "lastNameTH">Last Name</th>
+					<th class ="emailAddressTH">Email Address</th>
+					<th class ="contactNumberTH">Contact #</th>
+				</tr>
+			</thead>
+			<tbody id = "users">
+			</tbody>
+		</table>
+		<form class ="userInfoForm">
+			<div class ="inputContainer">
+				<label for="firstName">First Name:</label>
+				<input type="text" id="firstName">
+			</div>
+			<div class ="inputContainer">
+				<label for="lastName">Last Name:</label>
+				<input type="text" id="lastName">
+			</div>
+			<div class ="inputContainer">
+				<label for="emailAddress">Email Address:</label>
+				<input type="text" id="emailAddress">
+			</div>
+			<div class ="inputContainer">
+				<label for="contactNumber">Contact Phone Number:</label>
+				<input type="text" id="contactNumber">
+			</div>
+			<div class ="inputContainer">
+				<label for="submit"></label>
+				<input type="submit" id="formSubmit" value="Add User">
+			</div>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+*{
+	margin:0;
+	padding:0;
+	outline:1px dotted purple;
+}
+.wrapper{
+	width: 1320px;
+	height: 650px;
+	padding:20px 10px 20px 20px;
+	background-color:silver;
+}
+
+.userInfo th{
+	width:150px;
+	text-align:left;
+}
+.userInfo tbody{
+	height:85px;
+	margin-bottom:30px;
+}
+.userInfoForm{
+	margin-top:35px;
+}
+
+.inputContainer label, .inputContainer input{
+	display:inline-block;
+	width:175px;
+}
+.inputContainer label{
+	text-align:right;
+}
+#formSubmit{
+	width:75px;
+	margin-top:50px;
+	margin-left:100px;
+}
+

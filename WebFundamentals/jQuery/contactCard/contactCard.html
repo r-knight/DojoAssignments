@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src= 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Users</title>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$('#formSubmit').click(function(){
+				var firstName = $('#firstName').val();
+				var lastName = $('#lastName').val();
+				var description = $('#description').val();
+				if (firstName && lastName && description){
+					var fName = firstName + " " + lastName;
+					var descAltText = '<p class="desc">'+description+'</p>';
+					$('.cardContainer').append(
+						"<div class='card' data-alt-side='"+descAltText+"'><h3>" + fName +"</h3><p>Click for Description!</p></div>");	
+					return false;
+				}
+				else{
+					alert("All fields must be filled in!");
+					return false;
+				}
+				
+			});
+				
+			$('.cardContainer').on('click', '.card', function(){
+				var temp = $(this).html();
+				$(this).html($(this).attr('data-alt-side'));
+				$(this).attr('data-alt-side', temp);
+			});
+				
+				
+				
+		});
+	</script>
+	<div class = "wrapper">
+		<form class ="userInfoForm">
+			<div class ="inputContainer">
+				<label for="firstName">First Name:</label>
+				<input type="text" id="firstName">
+			</div>
+			<div class ="inputContainer">
+				<label for="lastName">Last Name:</label>
+				<input type="text" id="lastName">
+			</div>
+			<div class ="inputContainer">
+				<label for="description">Description:</label>
+				<textarea id="description" cols="40" rows="5"></textarea>
+			</div>
+			<div class ="inputContainer">
+				<label for="submit"></label>
+				<input type="submit" id="formSubmit" value="Add User">
+			</div>
+		</form>
+		<div class ="cardContainer">
+		</div>
+	</div>
+</body>
+</html>
