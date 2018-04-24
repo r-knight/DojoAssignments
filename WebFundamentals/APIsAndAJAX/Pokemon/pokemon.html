@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src= 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Pokemon</title>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			var pokemon = {
+				"id": 0,
+				"spriteUrl": "masterball.png",
+				"apiUrl" : ""
+			}
+			var pokes = {};
+			for (var k = 1; k <=806; k++)
+			{
+				var newPoke = Object.assign({}, pokemon); 
+				newPoke.spriteUrl = "'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + k + ".png'";
+				newPoke.apiUrl = "'http://pokeapi.co/api/v2/pokemon/"+k+"/'";
+				newPoke.id = k;
+				pokes[k] = newPoke;
+			}
+			console.log(pokes);
+			function displayPokes(num)
+			{
+				for (var i = 1; i <= num; i++)
+				{
+						$('.sprites').append("<li><img src="+pokes[i].spriteUrl+"alt="+pokes[i].id+"></li>");
+				}
+			}
+			/*function getImages(num){
+				if (num <=0){
+					return;
+				}
+				if (num > 806){
+					num = 806;
+					alert("Number exceeds maximum, setting num to " + num);
+				}
+				for (var i = 1; i <=num; i++)
+				{	
+					if (true)
+					{
+						var url = "http://pokeapi.co/api/v2/pokemon/"+i+"/";
+						//var newPoke = pokemon;
+						var pokeName = "";
+						var spriteUrl = "";
+						$.getJSON(url,function(data){
+							pokeName = data.name;
+							spriteUrl = "'"+data.sprites.front_default+"'";
+							console.log(pokeName);
+							console.log(spriteUrl);
+							$('.sprites').append("<li><img src="+spriteUrl+"alt="+pokeName+"></li>");
+						});
+					}
+					
+					/*console.log(pokes[i]);
+					console.log(pokes[i]["url"]);
+				}
+			}*/
+			displayPokes(151);
+		});
+	</script>
+	<div class = "wrapper">
+		<h2>First 151 Pokemon</h2>
+		<ul class = "sprites">
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src= 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Pokemon</title>
+</head>
+<body>
+	<script>
+		function capitalizeFirstLetter(string) {
+			return string.charAt(0).toUpperCase() + string.slice(1);
+		}
+		$(document).ready(function(){
+			var pokemon = {
+				"id": 0,
+				"spriteUrl": "masterball.png",
+				"apiUrl" : ""
+			}
+			var pokes = {};
+			for (var k = 1; k <=806; k++)
+			{
+				var newPoke = Object.assign({}, pokemon); 
+				newPoke.spriteUrl = "'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + k + ".png'";
+				newPoke.apiUrl = "https://pokeapi.co/api/v2/pokemon/"+k+"/";
+				newPoke.id = k;
+				pokes[k] = newPoke;
+			}
+			console.log(pokes);
+			function displayPokes(num)
+			{
+				for (var i = 1; i <= num; i++)
+				{
+						//var classTag = "'class=";
+						//classTag += i + "'";
+						$('.sprites').append("<li><img class='Pokemon' src="+pokes[i].spriteUrl+"alt="+pokes[i].id+"></li>");
+				}
+			}
+			$('.sprites').on('click', '.Pokemon', function(){
+				var pId = this.alt;
+				var url = pokes[pId].apiUrl;
+				$.getJSON(url, function(data){
+					var srcString = "src="+ pokes[pId]["spriteUrl"];
+					var altString = " alt='" + pId+"'";
+					var nameString = data.name;
+					nameString = capitalizeFirstLetter(nameString);
+					var types = [];
+					var typesString = "";
+					var weight = '<li class ="height"><h3>Weight</h3><p>'+ data.weight + '</p></li>';
+					var height = '<li class ="height"><h3>Height</h3><p>'+ data.height + '</p></li>';
+					for (var x = 0; x < data.types.length; x++)
+					{
+						types[x] = data["types"][x]["type"]["name"];
+						types[x] = capitalizeFirstLetter(types[x]);
+						typesString += '<ul class = "typesList"><li class="type'+x+1+'">'+ types[x]+'</li>'
+						if (x == types.length-1){
+							typesString +='</ul>';
+						}
+					}
+					var htmlString = '<li><h1 class="name">'+nameString +'</h1></li><li><img class="pokeImg"' + srcString +  altString + '></li>'+typesString+height + weight +'</ul>';
+					$('.info').html(htmlString);
+					
+				});
+			});
+			/*function getImages(num){
+				if (num <=0){
+					return;
+				}
+				if (num > 806){
+					num = 806;
+					alert("Number exceeds maximum, setting num to " + num);
+				}
+				for (var i = 1; i <=num; i++)
+				{	
+					if (true)
+					{
+						var url = "http://pokeapi.co/api/v2/pokemon/"+i+"/";
+						//var newPoke = pokemon;
+						var pokeName = "";
+						var spriteUrl = "";
+						$.getJSON(url,function(data){
+							pokeName = data.name;
+							spriteUrl = "'"+data.sprites.front_default+"'";
+							console.log(pokeName);
+							console.log(spriteUrl);
+							$('.sprites').append("<li><img src="+spriteUrl+"alt="+pokeName+"></li>");
+						});
+					}
+					
+					/*console.log(pokes[i]);
+					console.log(pokes[i]["url"]);
+				}
+			}*/
+			displayPokes(151);
+			console.log(pokes[73]);
+		});
+	</script>
+	<div class = "wrapper">
+		<h2>First 151 Pokemon</h2>
+		<ul class = "sprites">
+		</ul>
+		<div class = "dex">
+			<ul class = "info">
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

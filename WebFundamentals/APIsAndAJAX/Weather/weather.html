@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src= 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Weather</title>
+</head>
+<body>
+	<script>
+		$(document).ready(function(){
+			$('.submitBtn').click(function() {
+				var key = "" //add key from open weather map API here, otherwise api calls will fail.
+				if (key ==""){
+					alert("Please add key to weather.html file");
+					return false;
+				}
+				key = "&APPID="+key;
+				var baseUrl = "http://api.openweathermap.org/data/2.5/weather?q="
+				var city=($('.selectedCity').val());
+				if (city ==""){
+					alert("Please enter the name of a city");
+					return false;
+				}
+				var unitsString = "&units=imperial";
+				$('.location').text(city);
+				city = encodeURIComponent(city.trim());
+				var url = baseUrl + city + key + unitsString;
+				//alert(url);
+				// your code here (build up your url)
+				
+				$.get(url, function(res) {
+					var tempString = "Temperature: ";
+					//alert(res["main"]["temp"]);
+					tempString = tempString + res["main"]["temp"];
+					//alert(tempString);
+					$('.temperature').text(tempString);
+					// your code here
+				}, 'json');
+				// don't forget to return false so the page doesn't refresh
+				
+				return false;
+			});
+		});
+		
+	</script>
+	<div class = "wrapper">
+		<h1 class = "location">City</h1>
+		<h3 class = "temperature">Temperature: <span class="temp"></span></h3>
+		<form id = "citySelect">
+			<input type="text" placeholder="City Name" class="selectedCity">
+			<input type="submit" class="submitBtn">
+		</form>
+	</div>
+</body>
+</html>

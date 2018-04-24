@@ -1,0 +1,48 @@
+
+.wrapper{
+	min-width: 1000px;
+	min-height: 800px;
+	padding:20px 10px 20px 20px;
+	background-color:silver;
+}
+
+.sprites{
+	list-style:none;
+	display:inline-grid;
+	grid-template-columns:100px 100px 100px 100px 100px 100px 100px 100px 100px;
+	width:900px;
+	margin-right:0;
+	vertical-align:top;
+}
+.sprites li{
+}
+.sprites img{
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+}
+.dex{
+	display:inline-block;
+	width:250px;
+	height:500px;
+	border:20px solid red;
+	vertical-align:top;
+	position:fixed;
+}
+.dex img{
+	margin-left:30px;
+}
+.info{
+	list-style:none;
+	margin-left:10px;
+	padding:0;
+}
+.info li{
+	margin-bottom:15px;
+}
+.typesList{
+	list-style:disc;
+}
+.typesList li{
+	margin-bottom:0;
+}
