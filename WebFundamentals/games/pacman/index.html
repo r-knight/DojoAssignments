@@ -1,0 +1,135 @@
+<html>
+	<head>
+		<title>Pacman</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+	</head>
+	<body>
+		<div class="container">
+			<div id='world'></div>
+			<div id="pacman"></div>
+			<div id="score"></div>
+		</div>
+		<!-- List of features to build: -->
+		
+		<!-- 1) Have JS display world -- DONE  -->
+		<!-- 2) Have character move up and down -- DONE -->
+		<script type='text/javascript'>
+			// Generate game world
+			var worldArray = [
+				[2,2,2,2,2,2,2,2,2,2],
+				[2,0,1,1,1,1,1,1,1,2],
+				[2,1,1,1,1,1,1,1,1,2],
+				[2,1,1,1,1,1,1,1,1,2],
+				[2,1,2,2,2,2,2,1,1,2],
+				[2,1,2,1,1,3,2,1,1,2],
+				[2,1,2,1,2,2,2,1,1,2],
+				[2,1,2,1,1,1,1,1,1,2],
+				[2,2,2,2,2,2,2,2,2,2]			
+			];
+			var score =0;
+			
+			var pacmanObj = {
+				x:1,
+				y:1,
+				minX:0,
+				minY:0,
+				maxX:worldArray[0].length-1,
+				maxY:worldArray.length-1
+			};
+			function displayWorld(){
+				var output = '';
+				for (var i =0; i < worldArray.length;i++){
+					output += "<div class='row'>";
+					for (var j = 0; j < worldArray[i].length;j++){
+						if (worldArray[i][j] == 2){
+							output+= "<div class='brick'></div>";
+						}
+						else if (worldArray[i][j] == 1){
+							output+= "<div class='coin'></div>";
+						}
+						else if (worldArray[i][j] == 0){
+							output+= "<div class='empty'></div>";
+						}
+						else if (worldArray[i][j] == 3){
+							output+= "<div class='cherry'></div>";
+						}
+					}
+					output +="</div>";
+				}
+				document.getElementById('world').innerHTML = output;
+			}
+			
+			displayWorld();
+			
+			function displayPacman(direction){
+				document.getElementById('pacman').style.transform="rotate("+direction+")";
+				document.getElementById('pacman').style.top = pacmanObj.y*20+"px";
+				document.getElementById('pacman').style.left = pacmanObj.x*20+"px";
+			}
+			function displayScore(){
+				document.getElementById('score').innerHTML = score;
+			}
+			
+			displayPacman("rotate(0deg)");
+			displayScore();
+			document.onkeydown = function(e)
+			{
+				var direction = "0deg";
+				if(e.keyCode ==37) // LEFT
+				{
+					direction = "180deg";
+					if (pacmanObj.x-1 >= pacmanObj.minX){
+						if (!(worldArray[pacmanObj.y][pacmanObj.x-1] == 2)){
+							pacmanObj.x--;
+						}
+					}
+				}
+				else if(e.keyCode ==39) // RIGHT
+				{
+					direction = "0deg";
+					if (pacmanObj.x+1 <= pacmanObj.maxX){
+						if (!(worldArray[pacmanObj.y][pacmanObj.x+1] == 2)){
+							pacmanObj.x++;
+						}
+					}
+				}
+				else if(e.keyCode ==40) // DOWN
+				{
+					direction = "90deg";
+					if (pacmanObj.y+1 <= pacmanObj.maxY){
+						if (!(worldArray[pacmanObj.y+1][pacmanObj.x] == 2)){
+							pacmanObj.y++;
+						}
+					}
+				}
+				else if(e.keyCode ==38) // UP
+				{
+					direction = "270deg";
+					if (pacmanObj.y-1 >= pacmanObj.minY){
+						if (!(worldArray[pacmanObj.y-1][pacmanObj.x] == 2)){
+							pacmanObj.y--;
+						}
+					}
+				}
+				
+				if(worldArray[pacmanObj.y][pacmanObj.x] == 1)
+				{
+					worldArray[pacmanObj.y][pacmanObj.x] = 0;
+					displayWorld();
+					score = score+10;
+					displayScore();
+				}
+				if(worldArray[pacmanObj.y][pacmanObj.x] == 3)
+				{
+					worldArray[pacmanObj.y][pacmanObj.x] = 0;
+					displayWorld();
+					score = score+50;
+					displayScore();
+				}
+				displayPacman(direction);
+			}
+			
+		</script>
+	</body>
+</html>

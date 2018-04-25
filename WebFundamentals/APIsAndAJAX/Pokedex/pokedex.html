@@ -44,18 +44,17 @@
 					var nameString = data.name;
 					nameString = capitalizeFirstLetter(nameString);
 					var types = [];
-					var typesString = "";
+					var typesString = '<li><h3>Types</h3><ul class = "typesList">';
 					var weight = '<li class ="height"><h3>Weight</h3><p>'+ data.weight + '</p></li>';
 					var height = '<li class ="height"><h3>Height</h3><p>'+ data.height + '</p></li>';
 					for (var x = 0; x < data.types.length; x++)
 					{
 						types[x] = data["types"][x]["type"]["name"];
 						types[x] = capitalizeFirstLetter(types[x]);
-						typesString += '<ul class = "typesList"><li class="type'+x+1+'">'+ types[x]+'</li>'
-						if (x == types.length-1){
-							typesString +='</ul>';
-						}
+						typesString += '<li class="type'+x+1+'">'+ types[x]+'</li>'
+
 					}
+					typesString +='</ul></li>';
 					var htmlString = '<li><h1 class="name">'+nameString +'</h1></li><li><img class="pokeImg"' + srcString +  altString + '></li>'+typesString+height + weight +'</ul>';
 					$('.info').html(htmlString);
 					
