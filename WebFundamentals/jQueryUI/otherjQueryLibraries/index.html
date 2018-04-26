@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/start/jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="fancyinput.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="assets/jquery.pointpoint/jquery.pointpoint.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script src="assets/jquery.pointpoint/transform.js"></script>
+		<script src="assets/jquery.pointpoint/jquery.pointpoint.js"></script>
+		<script src="masonry.pkgd.js"></script>
+		<script src="fancyinput.js"></script>
+		<script>
+			$(document).ready(function(){
+				$( function() {
+					$(".date").datepicker();
+				} );
+				var pp = $('#submit').pointPoint();
+				$('.grid').masonry()
+				$('#name').fancyInput();
+				$('form').submit(function(){
+					var fromDate = $('#from').val();
+					var toDate = $('#to').val();
+					var name = $('#name').val();
+					if (name == undefined || name == ""){
+						alert("Please enter your name");
+					}
+					else if (fromDate == undefined || toDate == undefined || fromDate == "" || toDate == ""){
+						alert("Please select valid dates");
+					}
+					else if (fromDate >= toDate){
+						alert("The to date must be after the from date");
+					}
+					else{
+						alert("Thank you, " + name + ", your trip has been confirmed from " +fromDate + " until " + toDate);
+					}
+					return false;
+				});
+			
+			});
+		</script>
+		<title>jQuery UI - Date Validation</title>
+	</head>
+	<body>
+		<div class="grid">
+			<h2 class="grid-item grid-item--width4"> Welcome to the Codingdojo plan-a-cruise!</h2>
+			<form class="grid-item grid-item--width2">
+				<div class="grid-item">
+					<label for="from">From:</label>
+					<input type="text" class="date" id="from">
+				</div>
+				<div class="grid-item">
+					<label for="to">To:</label>
+					<input type="text" class="date" id="to">
+				</div>
+				<div class="grid-item">
+					<label for="name">Name:</label>
+					<input type="text" id="name" class="inputTest">
+				</div>
+				<div class="grid-item">
+					<input type="submit" id="submit">
+				</div>
+			</form>
+		</div>
+	</body>
+
+
+
+
+
+
+</html>

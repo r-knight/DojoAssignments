@@ -1,0 +1,14 @@
+#accordion{
+	
+	width:500px;
+	display:inline-block;
+	vertical-align:top;
+}
+#tabs{
+	width:500px;
+	display:inline-block;
+	vertical-align:top;
+}
+#spinner{
+	width:375px;
+}

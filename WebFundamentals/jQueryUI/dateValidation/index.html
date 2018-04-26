@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/start/jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$( function() {
+					$(".date").datepicker();
+				} );
+				
+				$('form').submit(function(){
+					var fromDate = $('#from').val();
+					var toDate = $('#to').val();
+					var name = $('#name').val();
+					if (name == undefined || name == ""){
+						alert("Please enter your name");
+					}
+					else if (fromDate == undefined || toDate == undefined || fromDate == "" || toDate == ""){
+						alert("Please select valid dates");
+					}
+					else if (fromDate >= toDate){
+						alert("The to date must be after the from date");
+					}
+					else{
+						alert("Thank you, " + name + ", your trip has been confirmed from " +fromDate + " until " + toDate);
+					}
+					return false;
+				});
+			
+			});
+		</script>
+		<title>jQuery UI - Date Validation</title>
+	</head>
+	<body>
+		<h2> Welcome to the Codingdojo plan-a-cruise!</h2>
+		<form>
+			<label for="from">From:</label>
+			<input type="text" class="date" id="from">
+			<label for="to">To:</label>
+			<input type="text" class="date" id="to">
+			<label for="name">Name:</label>
+			<input type="text" id="name">
+			<input type="submit" id="submit">
+		</form>
+	</body>
+
+
+
+
+
+
+</html>

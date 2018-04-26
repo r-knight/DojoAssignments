@@ -1,0 +1,30 @@
+form{
+	background-color:silver;
+	padding-top:25px;
+}
+label, input{
+	display:inline-block;
+	margin-bottom:25px;
+}
+label{
+	width:75px;
+	text-align:right;
+}
+input{
+	width:160px;
+}
+#name{
+	margin-top:25px;
+}
+
+#submit{
+	width:25%;
+	margin-left:80px;
+}
+
+.grid{
+	width:500px;
+}
+.grid-item { width: 250px; }
+.grid-item--width2 { width: 300px; }
+.grid-item--width4 { width: 450px; }
