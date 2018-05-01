@@ -1,0 +1,50 @@
+ //pip install Django--1.11.9
+
+Collects, downloads, and installs the "Django" package with version number 1.11.9
+This also installs any necessary related packages (in this case, pytz)
+
+This command may require the --user argument to install properly
+
+ //pip list
+
+Displays currently installed python packages and their versions
+
+ //deactivate
+
+Exits virtual environment and returns to normal terminal/shell functionality.
+This command does not work on Windows command prompt
+
+ //pip3 list
+
+Displays currently installed python packages and their versions
+
+ //call myEnvironments/py3Env/scripts/activate
+
+Activates the specified virtual environment
+
+ //pip install Django==1.11.9
+
+"Requirement already satisfied:" messages appear with package name (and version number, if specified) as well as the path to the install directory for that package
+
+ //pip freeze
+
+Outputs list of requirements in "requirements format", which is usable by a requirements.txt file
+Unless specified, this does not list packages that pip depends on
+
+ //pip freeze > requirements.text
+
+Creates a requirements.txt file in the current directory
+Requirements in this txt file are listed in the same format as if they were displayed by pip freeze in the terminal
+
+// pip uninstall django
+
+Displays a confirmaton prompt showing paths to files and folders that would be uninstalled
+
+// pip show Django
+
+Displays nothing (as Django has been deleted). If the package were installed, it would show details about the package
+This information includes name, version number, summary, license, install location, etc.
+
+//pip search Flask
+
+Displays names and summaries of extensions to Flask

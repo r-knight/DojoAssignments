@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Playground</title>
+		<style>
+			body {
+				background-color: light blue;
+			}
+			h1 {
+				color: maroon;
+				margin-left: 40px;
+			}
+			.box{
+				display:inline-block;
+				background-color:blue;
+				width:100px;
+				height:100px;
+			}
+			.red{
+				background-color:red;
+			}
+			.green{
+				background-color:green;
+			}
+			.yellow{
+				background-color:yellow;			
+			}
+			.black{
+				background-color:black;			
+			}
+			.white{
+				background-color:white;			
+			}
+		</style>
+	</head>
+	<body>
+		<h3>Welcome</h3>
+		{% for x in range(0, num) %}
+			{% if col == "red" %}
+				<p class="red box" ></p>
+			{% elif col == "green" %}
+				<p class="green box" ></p>
+			{% elif col == "white" %}
+				<p class="white box" ></p>
+			{% elif col == "black" %}
+				<p class="black box" ></p>
+			{% elif col == "yellow" %}
+				<p class="yellow box" ></p>
+			{% else %}
+				<p class="box" ></p>
+			{% endif %}
+		{% endfor %}
+	</body>
+</html>

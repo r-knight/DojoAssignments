@@ -1,0 +1,2 @@
+I forked the github repos for open cv and the tutorial links and followed along until I understood the process.
+I don't want to upload code that isn't my own.
