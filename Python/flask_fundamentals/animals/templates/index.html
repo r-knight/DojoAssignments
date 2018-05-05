@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Animals</title>
+		<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/main.css')}}">
+	</head>
+	<body>
+		<ul class="images">
+		    {% for i in range(num)%}
+			<img src ="static/img/{{ range(1, 11) | random }}.jpg">
+			{% endfor %}
+		</ul>
+	</body>
+</html>

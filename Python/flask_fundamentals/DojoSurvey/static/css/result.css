@@ -1,0 +1,31 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+.dataContainer{
+	border:2px solid gray;
+	width:425px;
+	margin-left:200px;
+	margin-top:50px;
+	padding: 10px;
+}
+p{
+	width:45%;
+	display:inline-block;
+	margin-bottom:10px;
+}
+h2{
+	text-decoration:underline;
+	margin-bottom:10px;
+}
+.btn{
+	background:linear-gradient(white, white,#F3F3F3);
+	border:1px solid black;
+	margin-left:350px;
+	text-decoration:none;
+	color:black;
+	padding-left:5px;
+	padding-right:5px;
+	margin-bottom:10px;
+}

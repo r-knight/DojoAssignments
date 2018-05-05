@@ -1,0 +1,34 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+.userSurvey{
+	border:2px solid gray;
+	width:425px;
+	margin-left:200px;
+	margin-top:50px;
+	padding-top:5px;
+}
+.userSurvey > *{
+	margin-bottom:5px;
+	display:inline-block;
+	vertical-align:top;
+}
+.userSurvey label, .userSurvey p{
+	width:200px;
+	margin-left:5px;
+	text-align:right;
+}
+.userSurvey input, textArea{
+	width:200px;
+	margin-left:5px;
+}
+.userSurvey .radioBtn{
+	width:30px !important;
+}
+.userSurvey #submit{
+	width:50px !important;
+	text-align:center;
+	margin-left:350px;
+}

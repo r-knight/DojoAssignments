@@ -1,0 +1,38 @@
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Dojo Fruit Stand</title>
+		<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/main.css')}}">
+			
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1>Thank you for your order!</h1>
+			<p>We ordered {{ purchased }} items for you and charged your student account on TIMESTAMP.</p>
+			<div class="mainContent">
+			<h2>You've ordered</h2>
+				<div class="orderForm">
+					<div class="fruits labels">
+						<p>Fruit Name</p>
+						<p>Strawberry</p>
+						<p>Raspberry</p>
+						<p>Apple</p>
+					</div><div class = "fruits quantities">
+						<p> Quantity</p>
+						<p> {{ strawberry }} </p>
+						<p> {{ raspberry }} </p>
+						<p> {{ apple }} </p>
+					</div>
+					<h2>Your Information</h2>
+					<div id="loginInfo">
+						<p>Name:</p>
+						<p>{{ fName }}</p>
+						<p>Your Student ID:</p>
+						<p>{{ stuId }} </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

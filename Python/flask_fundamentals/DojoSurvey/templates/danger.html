@@ -1,0 +1,23 @@
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML Table</title>
+		<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/mainstyle.css')}}">
+			
+	</head>
+	<body>
+		<form class="userSurvey" action='/result' method='post'>
+			<label for="name">Full Name</label>
+			<input type="text" name="name" id="name">
+			<p>Are you having fun yet?</p>
+			<label for="funchoice1" class="radioBtn">Yes</label>
+			<input type="radio" name="fun" id="funchoice1" class="radioBtn" value="yes">
+			<label for="funchoice2" class="radioBtn">No</label>
+			<input type="radio" name="fun" id="funchoice2" class="radioBtn" value="no">
+			<label for="comment">Leave a comment</label>
+			<textarea name="comment" id="comment"></textarea>
+			<input type="submit" name="submit" id="submit">
+		</form>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML Table</title>
+		<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/result.css')}}">
+			
+	</head>
+	<body>
+		<div class="dataContainer">
+			<h2>Submitted information:</h2>
+			<p>Name:</p>
+			<p id="uName">{{ session["name"] }} </p>
+			<p>Having fun?</p>
+			<p id="uFun">{{ session["fun"] }} </p>
+			<p>Comment</p>
+			<p id="uComment">{{ session["comment"] }}</p>
+			<a href="/" class="btn">Go Back</a>
+		</div>
+	</body>
+</html>

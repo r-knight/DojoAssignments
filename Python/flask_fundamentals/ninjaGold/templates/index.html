@@ -1,0 +1,62 @@
+<html>
+    <head>
+       <title>Counter</title>
+	   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
+    </head>
+	<body>
+		<div class="container">
+			<div class="goldDisplay">
+				<p>Your gold:</p>
+				<p class="goldBalance">{{session['gold']}}</p>
+			</div>
+			<div class ="locations">
+				<div class="location">
+					<h3>Farm</h3>
+					<p>(earns 10-20 gold)</p>
+					<form action="/process_money" method="post">
+					  <input type="hidden" name="building" value="farm" />
+					  <input type="submit" value="Find Gold!"/>
+					</form>
+				</div>
+				<div class="location">
+					<h3>Cave</h3>
+					<p>(earns 5-10 gold)</p>
+					<form action="/process_money" method="post">
+					  <input type="hidden" name="building" value="cave" />
+					  <input type="submit" value="Find Gold!"/>
+					</form>
+				</div>
+				<div class="location">
+					<h3>House</h3>
+					<p>(earns 2-5 gold)</p>
+					<form action="/process_money" method="post">
+					  <input type="hidden" name="building" value="house" />
+					  <input type="submit" value="Find Gold!"/>
+					</form>
+				</div>
+				<div class="location">
+					<h3>Casino</h3>
+					<p>(earns/takes 0-50 gold)</p>
+					<form action="/process_money" method="post">
+					  <input type="hidden" name="building" value="casino" />
+					  <input type="submit" value="Find Gold!"/>
+					</form>
+				</div>
+			</div>
+			<div class="activities">
+				<p>Activities</p>
+				<div class="activitiesList">
+					{% if (session['activities'] | length) > 0 %}
+						{% for i in range ((session['activities'] | length), 0, -1) %}
+							{% if session['activities'][i-1]['result'] == "won"%}
+								<p class="won">Earned {{session['activities'][i-1]['gold']}} gold from the {{session['activities'][i-1]['location']}}! ({{session['activities'][i-1]['timestamp']}})</p>
+							{% else %}
+								<p class="lost">Entered the {{session['activities'][i-1]['location']}} and lost {{session['activities'][i-1]['gold']}} gold...Oh no! ({{session['activities'][i-1]['timestamp']}})</p>
+							{% endif %}
+						{% endfor %}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Dojo Fruit Stand</title>
+		<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/main.css')}}">
+			
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1>Dojo Fruit Store!</h1>
+			<div class="mainContent">
+			<h2>What would you like to buy?</h2>
+			<form class="orderForm" action="{{ url_for('checkout') }}" method='post'>
+				<div class="fruits labels">
+				<p>Fruit Name</p>
+					<label for="strawberries">Strawberry</label>
+					<label for="raspberries">Raspberry</label>
+					<label for="apples">Apple</label>
+				</div><div class = "fruits quantities">
+				<p> Quantity</p>
+					<input type="number" name="strawberries" id="strawberries" min=0>
+					<input type="number" name="raspberries" id="raspberries" min=0>
+					<input type="number" name="apples" id="apples" min=0>
+				</div>
+				<h2>Your Information</h2>
+				<div id="loginInfo">
+					<label for="name">Name:</label>
+					<input type="text" name="name" id="name">
+					<label for="studentId">Your Student ID:</label>
+					<input type="text" name="studentId" id="studentId">
+				</div>
+				<input type="submit" name="submit" id="submit" value="Buy me stuff!">
+			</form>
+			</div>
+			<div class="sidebar">
+				<h4>Welcome to Dojo Fruit Store!</h4>
+				<p>Jump on human and sleep on her all night long be long in the bed, purr in the morning and then give a bite to every human around for not waking up request food.</p>
+			</div>
+		</div>
+	</body>
+</html>

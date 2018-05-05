@@ -1,0 +1,79 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+.wrapper{
+	width: 1000px;
+}
+body > *{
+	margin-left:200px;
+	display:inline-block;
+}
+.mainContent{
+	display:inline-block;
+	vertical-align:top;
+}
+h2{
+	margin-top:35px;	
+	text-decoration:underline;
+}
+.orderForm{
+	width:425px;
+	padding-top:5px;
+}
+.fruits{
+	width:200px;
+	display:inline-block;
+	border:1px solid black;
+	border-collapse:collapse;
+	height:110px;
+	vertical-align:top;
+	padding-top:10px;
+}
+.orderForm > div > *{
+	margin-bottom:5px;
+	display:inline-block;
+	vertical-align:top;
+}
+.orderForm label, .orderForm p{
+	width:50%;
+	margin-left:5px;
+	margin-right:40%;
+	text-align:left;
+}
+.orderForm input{
+	width:100px;
+	margin-left:5px;
+	
+}
+.orderForm #submit{
+	width:80px !important;
+	text-align:center;
+	margin-left:315px;
+}
+#loginInfo > *{
+	width:190px;
+	display:inline-block;
+	margin-right:0;
+}
+
+.sidebar{
+	width:205px;
+	margin-left:25px;
+	display:inline-block;
+	vertical-align:top;
+	height:275px;
+	padding:10px;
+	background-color:aqua;
+}
+.sidebar p, .sidebar h5{
+	width:190px;
+}
+.sidebar h5{
+	margin-bottom:10px;
+}
+.sidebar p{
+	font-size:90%;
+	margin-left:5px;
+}
