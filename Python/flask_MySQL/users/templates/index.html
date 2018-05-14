@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Users Index</title>
+</head>
+<body>
+	<h1>Users</h1>
+	<table class="user_list">
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>Full Name</th>
+				<th>Email</th>
+				<th>Created At</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% if users %}
+				{% for user in users %}
+					<tr>
+						<td>{{user['id']}}</td>
+						<td>{{user['first_name']}} {{user['last_name']}}</td>
+							{% if user['email']%}
+								<td>{{user['email']}}</td>
+							{% else %}
+								<td>None</td>
+							{% endif %}
+						<td>{{user['created_at']}}</td>
+						<td><a href="/users/{{user['id']}}">Show</a>&nbsp;&nbsp;<a href="/users/{{user['id']}}/edit">Edit</a>&nbsp;&nbsp;<a href="/users/{{user['id']}}/destroy">Delete</a></td>
+					</tr>
+				{% endfor %}
+			{% endif %}
+		</tbody>
+	</table>
+	<a href='/users/new'>Add a new user</a>
+</body>
+</html>

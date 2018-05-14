@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Users View</title>
+	</head>
+	<body>
+		<h1>User {{user['id']}}</h1>
+		<div class='user_info'>
+			<p>Full Name: {{user['first_name']}} {{user['last_name']}}</p>
+			{% if user['email']%}
+				<p>Email: {{user['email']}}</p>
+			{% else %}
+				<p>Email: None</p>
+			{% endif %}
+			{% if user['email']%}
+				<p>Created At: {{user['created_at']}}</p>
+			{% else %}
+				<p>Created At: Unknown</p>
+			{% endif %}
+		</div>
+		<a href="/users/{{user['id']}}/edit">Edit</a>
+		<a href="/users">Go Back</a>
+	</body>
+</html>

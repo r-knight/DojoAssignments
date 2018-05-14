@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>Users Edit</title>
+	</head>
+	<body>
+		<h1>Edit user</h1>
+        {% with messages = get_flashed_messages() %}
+			{% if messages %}
+				{% for message in messages %}
+					<p>{{message}}</p>
+				{% endfor %}
+			{% endif %}
+        {% endwith %}
+		<form class='new_user' action="/users/{{user['id']}}" method='POST'>
+			<label for='f_name'>First Name:</label>
+			<input type='text' name='f_name' id='f_name' value={{user['first_name']}}>
+			<label for='l_name'>Last Name:</label>
+			<input type='text' name='l_name' id='l_name' value={{user['last_name']}}>
+			<label for='email'>Email:</label>
+			<input type='text' name='email' id='email' value={{user['email']}}>
+			<input type='submit' name='submit_new_user' id='submit_new_user' value='Update'>
+		</form>
+		<a href="/users/{{user['id']}}">Show</a>
+		<a href='/users'>Go Back</a>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Email Validation</title>
+		<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/style.css')}}">
+	</head>
+	<body>
+		<div class='wrapper'>
+			<div class = "failure messages">
+				{% with messages = get_flashed_messages() %}
+					{% if messages %}
+						{% for message in messages %}
+							<p>{{message}}</p>
+						{% endfor %}
+					{% endif %}
+				{% endwith %}
+			</div>
+			<div class='formContainer'>
+				<h1>Please register with a valid email address.</h1>
+				<form class='emailForm' action='/create_user' method='POST'>
+					<label for='email'>Email Address:</label>
+					<input type='text' name='email' id='email'>
+					<input type='submit' name='submit' id ='submit' value='Register'>
+				</form>
+			</div>	
+		</div>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+.wrapper{
+	margin-left:20px;
+	width:500px;
+}
+h1{
+	margin-left:30px;
+}
+p, label, input{
+	display:inline-block;
+	font-weight:bold;
+}
+.friendsContainer, .formContainer{
+	width: 500px;
+}
+.friendsContainer{
+	border-bottom: 2px solid gray;
+}
+.friendData, input{
+	margin-right:175px;
+}
+label, .label{
+	color: purple;
+	margin-left:45px;
+}
+.label{
+	width:135px;
+}
+label, input{
+	margin-bottom: 10px;
+}
+label{
+	width:100px;
+	text-align:right;
+	margin-right:35px;
+}
+input{
+	width:120px;
+	border-radius: 3px;
+}
+#add_friend{
+	margin-left:238px;
+	margin-right:0;
+	font-weight:normal;
+	width:70px;
+	background-color: lime;
+}

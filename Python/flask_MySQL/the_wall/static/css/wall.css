@@ -1,0 +1,61 @@
+.topbar{
+	height:60px;
+	border-bottom: 2px solid gray;
+	margin-bottom:10px;
+}
+.topbar h2, .topbar p, .topbar a{
+	display:inline-block;
+}
+.topbar h2{
+	width:60%;
+}
+.topbar p, .topbar a{
+	width:15%;
+	text-align:right;
+}
+.topbar p{
+	margin-left: 7.5%;
+}
+.topbar a{
+	text-decoration:none;
+}
+.message_form{
+	width: 400px;
+}
+#message_form_post{
+	background-color:green;
+	margin-left:339px;
+	color:white;
+    border-radius:3px;
+}
+.messagesContainer form{
+	width:325px;
+}
+#comment_form_post{
+	background-color: 	blue;
+	color: white;
+	margin-left: 194px;
+    border-radius:3px;
+}
+.message, .comment{
+    word-wrap: break-word;
+}
+.message, .message_info{
+	width: 400px;
+}
+.message{
+
+	border:2px solid green;
+    border-radius: 3px;
+}
+.comment, .comment_info{
+	width:300px;
+	margin-left: 40px;
+}
+.comment{
+	border:2px solid blue;
+    border-radius: 3px;
+}
+.author{
+	font-weight: bold;
+}

@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>login/registration</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1>Login and Registration</h1>
+			<div class="messages">
+				{% with messages = get_flashed_messages() %}
+					{% if messages %}
+						{% for message in messages %}
+							<p>{{message}}</p>
+						{% endfor %}
+					{% endif %}
+				{% endwith %}
+			</div>
+			<div class="formContainer">
+				<form class="registrationForm" action ='/create_user' method='POST'>
+					<label for="f_name">First Name:</label>
+					<input type="text" name="f_name" id="f_name" value = {{session['f_name']}}>
+					<label for="l_name">Last Name:</label>
+					<input type="text" name="l_name" id="l_name" value = {{session['l_name']}}>
+					<label for="email">Email:</label>
+					<input type="text" name="email" id="email" value = {{session['email']}}>
+					<label for="password">Password</label>
+					<input type="password" name="password" id="password">
+					<label for="passwordConfirm">Confirm Password</label>
+					<input type="password" name="passwordConfirm" id="passwordConfirm">
+					<input type="submit" name="login" id="login" value="Register!">
+				</form>
+				<form class="loginForm" action ='/login' method='POST'>
+					<label for="e_email">Email:</label>
+					<input type="text" name="e_email" id="e_email">
+					<label for="e_password">Password</label>
+					<input type="password" name="e_password" id="e_password">
+					<input type="submit" name="login" id="login" value="Login!">
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

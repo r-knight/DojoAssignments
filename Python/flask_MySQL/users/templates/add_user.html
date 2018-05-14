@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Users New</title>
+	</head>
+	<body>
+		<h1>Add a new user</h1>
+        {% with messages = get_flashed_messages() %}
+			{% if messages %}
+				{% for message in messages %}
+					<p>{{message}}</p>
+				{% endfor %}
+			{% endif %}
+        {% endwith %}
+		<form class='new_user' action='/users/create' method='POST'>
+			<label for='f_name'>First Name:</label>
+			<input type='text' name='f_name' id='f_name'>
+			<label for='l_name'>Last Name:</label>
+			<input type='text' name='l_name' id='l_name'>
+			<label for='email'>Email:</label>
+			<input type='text' name='email' id='email'>
+			<input type='submit' name='submit_new_user' id='submit_new_user' value='Create'>
+		</form>
+		<a href='/users'>Go Back</a>
+	</body>
+</html>

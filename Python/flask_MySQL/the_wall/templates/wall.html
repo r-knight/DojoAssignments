@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Wall</title>
+		<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/main.css')}}">
+		<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/wall.css')}}">
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="topbar">
+				<h2>Coding Dojo Wall</h2>
+				<p>Welcome, {{u_name}}!</p>
+				<a href='/logout'>Log off</a>
+			</div>
+			<div class="message_form">
+				<form action ='/post_message' method='POST'>
+					<textarea name="new_message" rows="5" cols="60"></textarea>
+					<input type="submit" name="message_form_post" id="message_form_post" value="Post message!">
+                </form>
+			</div>
+			<div class="messagesContainer">
+				{% set printed_messages = {} %}
+				{% for message in content %}
+					{% if message['POST_NUMBER'] not in printed_messages%}
+						<p class='message_info'><span class='author'>{{message['MESSAGE_USER_F_NAME']}} {{message['MESSAGE_USER_L_NAME']}}</span> - {{message['MESSAGE_CREATED_AT']}}</p>
+						<p class='message'>{{message['message']}}</p>
+						<form action ='/post_comment' method='POST'>
+							<textarea name="new_comment" rows="4" cols="40"></textarea>
+							<input type="hidden" name="post_id" value={{message['POST_NUMBER']}}>
+							<input type="submit" name="comment_form_post" id="comment_form_post" value="Post comment!">
+						</form>
+						{% set x=printed_messages.__setitem__(message['POST_NUMBER'], True) %}
+					{% endif %}
+					{% if message['comment']%}
+						<p class='comment_info'><span class='author'>{{message['COMMENTOR_F_NAME']}} {{message['COMMENTOR_L_NAME']}} </span> - {{message['COMMENT_CREATED_AT']}}</p>
+						<p class='comment'>{{message['comment']}}</p>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</body>
+</html>

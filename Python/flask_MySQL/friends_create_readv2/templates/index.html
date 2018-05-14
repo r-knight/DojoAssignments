@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>C+R Friends</title>
+		<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/style.css')}}">
+	</head>
+	<body>
+		<div class='wrapper'>
+			<h1>These are all my friends!</h1>
+			<div class="friendsContainer">
+			{%for friend in friends%}
+				<div class='friend'>
+					<p class='label'>First Name:</p>
+					<p class='friendData'>{{ friend['first_name'] }}</p>
+					<p class='label'>Last Name:</p>
+					<p class='friendData'>{{ friend['last_name'] }}</p>
+					<p class='label'>Occupation:</p>
+					<p class='friendData'>{{ friend['occupation'] }}</p>
+				</div>
+			{% endfor %}
+			</div>
+			<div class='formContainer'>
+				<h1>Add a friend</h1>
+				<form class='friendForm' action='/create_friend' method='POST'>
+					<label for='friend_fname'>First name:</label>
+					<input type='text' name='friend_fname' id='friend_fname'>
+					<label for='friend_lname'>Last name:</label>
+					<input type='text' name='friend_lname' id='friend_lname'>
+					<label for='friend_occupation'>Occupation:</label>
+					<input type='text' name='friend_occupation' id='friend_occupation'>
+					<input type='submit' name='add_friend' id ='add_friend' value='Add'>
+				</form>
+			</div>
+	
+		</div>
+	</body>
+</html>
