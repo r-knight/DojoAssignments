@@ -1,0 +1,41 @@
+                                                                                                                                                                                <html>
+	<head>
+		<title>Session Words</title>
+        {% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static 'words/css/main.css' %}">
+	</head>
+	</head>
+	<body>
+		<div class='wrapper'>
+			<div class='form_container'>
+				<form action='/process' method='POST'>
+					{% csrf_token %}
+					<label for='new_word'>Add a new word:</label>
+					<input type='text' name = 'new_word' id='new_word'>
+					<label for = 'color'>Choose color</label>
+					<ul>
+						<li><input type ='radio' name='color' value='red' checked="checked">
+						<label for = 'red'>Red</label></li>
+						<li><input type ='radio' name='color' value='green'>
+						<label for = 'Green'>green</label></li>
+						<li><input type ='radio' name='color' value='blue'> 
+						<label for = 'blue'>Blue</label></li>
+					</ul>
+					<input id="checkbox_big" name ="checkbox_big" type="checkbox" value='big'>
+					<label for ="checkbox_big" class="checkbox_label">show in BIG fonts!</label>
+					<input type ='submit' name='submit' id='submit' value='Add to Session'>
+				</form>
+			</div>
+			<div class='words_container'>
+				<a class='clear_session' href='/reset'>Clear Session</a>
+				<div class= 'words_list'>
+					{% if request.session.words %}
+						{% for word in request.session.words %}
+							<p> <span class='{{word.color}} {{word.size}}'>{{word.word}}</span> - added on {{word.timestamp}} UTC </p>
+						{% endfor %}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

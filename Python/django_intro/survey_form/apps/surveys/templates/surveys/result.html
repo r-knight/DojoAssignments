@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Survey Form - Results</title>
+        {% load static %}
+		<link rel="stylesheet" type="text/css" href='{% static "surveys/css/result.css" %}'>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="thanks">
+				<p>Thanks for submitting this form! You have submitted this form {{request.session.counter}} times now.</p>
+			</div>
+			<div class="results_container">
+				<h3>Submitted Information</h3>
+				<p class="input_label">Your Name:</p>
+				<p class="user_input">{{request.session.name}}</p>
+				<p class="input_label">Dojo Location</p>
+				<p class="user_input">{{request.session.location}}</p>
+				<p class="input_label">Favorite Language</p>
+				<p class="user_input">{{request.session.language}}</p>
+				<p class="input_label">Comment (optional):</p>
+				<p class="user_input">{{request.session.comment}}</p>
+
+				<a href='/'>Go Back</a>
+			</div>
+		</div>
+	</body>
+</html>

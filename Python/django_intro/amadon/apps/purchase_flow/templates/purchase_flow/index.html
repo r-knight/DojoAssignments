@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<title>Amadon</title>
+        {% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static 'purchase_flow/css/store.css' %}">
+	</head>
+	<body>
+		<div class='wrapper'>
+			<h1>Amadon Store</h1>
+			<div class='item_list_container'>
+				<ul class='item_list'>
+					<li class='top_row'>
+						<p>Item</p>
+						<p>Price</p>
+						<p>Actions</p>
+					</li>
+					<li>
+						<p>Dojo Tshirt</p>
+						<p>$19.99</p>
+						<form action='/amadon/buy' method='post'>
+						  {% csrf_token %}
+						  <select name='quantity'>
+							 <option>1</option>
+							 <option>2</option>
+							 <option>3</option>
+						  </select>
+						  <input type='hidden' name='product_id' value='1001' />
+						  <button type='submit'>Buy!</button>
+						</form>
+					</li>
+					<li>
+						<p>Dojo Sweater</p>
+						<p>$29.99</p>
+						<form action='/amadon/buy' method='post'>
+						  {% csrf_token %}
+						  <select name='quantity'>
+							 <option>1</option>
+							 <option>2</option>
+							 <option>3</option>
+						  </select>
+						  <input type='hidden' name='product_id' value='1002' />
+						  <button type='submit'>Buy!</button>
+						</form>
+					</li>
+					<li>
+						<p>Dojo Cup</p>
+						<p>$4.99</p>
+						<form action='/amadon/buy' method='post'>
+						  {% csrf_token %}
+						  <select name='quantity'>
+							 <option>1</option>
+							 <option>2</option>
+							 <option>3</option>
+						  </select>
+						  <input type='hidden' name='product_id' value='1003' />
+						  <button type='submit'>Buy!</button>
+						</form>
+					</li>
+					<li>
+						<p>Algorithm Book</p>
+						<p>$49.99</p>
+						<form action='/amadon/buy' method='post'>
+						  {% csrf_token %}
+						  <select name='quantity'>
+							 <option>1</option>
+							 <option>2</option>
+							 <option>3</option>
+						  </select>
+						  <input type='hidden' name='product_id' value='1004' />
+						  <button type='submit'>Buy!</button>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+label, textarea, input select{
+	display: inline-block;
+	margin-bottom:10px;
+	vertical-align:top;
+}
+
+label{
+	width:35%;
+	text-align: left;
+    margin-left:10%;
+}
+select, input{
+    margin-right:10%;
+}
+#submit{
+	margin-left:70%;
+	margin-right:0;
+}
+textarea{
+    margin-left: 10%;
+}
+.form_container{
+	width:400px;
+	padding-top:10px;
+	border:1px solid black;
+}

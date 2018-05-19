@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+	<head>
+		<title>Login / Registration - Home</title>
+	</head>
+	<body>
+		<div class='wrapper'>
+			<div class='top_bar'>
+				<a href='/books'>Home</a>
+				<a href='/books/add'>Add Book and Review</a>
+				<a href='/users/logout'>Logout</a>
+			</div>
+			<div class='user_info'>
+				<p> User Alias: {{user.alias}}</p>
+				<p> Name: {{user.name}}</p>
+				<p> email: {{user.email}}</p>
+				<p> Total Reviews: {{user.review_set.count}}</p>
+				
+				<div class='reviewed_books'>
+				<p>Posted reviews on the following books:</p>
+					{% for review in reviews %}
+						<a href='/books/{{review.book.id}}'>{{review.book.title}}</a>
+					{% endfor %}
+				</div>
+			</div> 
+		</div>
+	</body>
+</html>

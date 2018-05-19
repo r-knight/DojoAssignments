@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+	<head>
+		<title>Books - Add</title>
+	</head>
+	<body>
+		<div class='wrapper'>
+			<div class='top_bar'>
+				<a href='/books'>Home</a>
+				<a href='/users/logout'>Logout</a>
+			</div>
+			<div class='new_book_review'>
+				<h3>Add a New Book Title and a Review:</h3>
+				{% if messages %}
+					<div class = 'errors'>
+						{% for message in messages %}
+							<p class='error'>Error: {{message}}</p>
+						{% endfor %}
+					</div>
+				{% endif %}
+				<form action='/books/process_book' method='POST'>
+					{% csrf_token %}
+					<label for='title'>Book Title:</label>
+					<input type='text' name='title' id='title'>
+					<label for='existing_author'>Choose from the list:</label>
+					<select name='existing_author'>
+						<option value="" disabled selected>Select an Author</option>
+						{% for author in authors %}
+							<option value={{author.id}}>{{author.name}}</option>
+						{% endfor %}
+					</select>
+					<label for='new_author'>Or add a new author:</label>
+					<input type='text' name='new_author' id='new_author'>
+					<label for='review_text'>Add a Review:</label>
+					<textarea name='review_text' id='review_text'></textarea>
+					<label for='rating'>Rating:</label>
+					<input type='number' name='rating' id='rating' min='1' max='5' value='1'>
+					<p> stars.</p>
+					<input type='submit' name='rating_submit' id='rating_submit' value='Submit Review'>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

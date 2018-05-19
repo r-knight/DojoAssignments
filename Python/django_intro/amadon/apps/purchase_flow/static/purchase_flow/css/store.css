@@ -1,0 +1,22 @@
+ul{
+    width:500px;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    border:2px solid black;
+}
+
+ul > li:nth-of-type(odd){
+	background-color:#E9E9F9;
+}
+ul > li:nth-of-type(even){
+	background-color:#FFFFFF;
+}
+
+li > *{
+    width:150px;
+    display:table-cell;
+    border-left: 1px solid black;
+    padding:3px;
+    border-collapse:collapse;
+}

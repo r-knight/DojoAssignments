@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+	<head>
+		<title>Login / Registration - Home</title>
+	</head>
+	<body>
+		<div class='wrapper'>
+			<div class='top_bar'>
+                {% if user.name %}
+					<h3>Welcome, {{user.name}}!</h3>
+                {% else %}
+					<h3>Welcome, guest!</h3>
+                {% endif %}
+				<a href='/books'>Home</a>
+				<a href='/users/logout'>Logout</a>
+			</div>
+            <h3>{{book.title}}</h3>
+            <p>{{book.author.name}}</p>
+			<div class='recent'>
+				<h3>Reviews:</h3>
+				{% for review in recent %}
+					<div class='review'>
+						<p>Rating: {{review.rating}}</p>
+                            {% if not review.reviewer.alias == 'guest' %}
+								<p><a href='/users/{{review.reviewer.id}}'>{{review.reviewer.alias}}</a> says: {{review.text}}</p>
+							{% else %}
+								<p>Guest user says: {{review.description}}</p>
+							{% endif %}
+						<p>Posted on {{review.created_at}}</p>
+						{% if review.reviewer.id == request.session.id and review.reviewer.id != 0%}
+							<a href='/books/{{review.id}}/destroy'>Delete this Review</a>
+						{% endif %}
+					</div>
+				{% endfor %}
+			</div>
+			<div class='new_review'>
+				<h3>Add a Review:</h3>
+				<form action='/books/review_existing' method='POST'>
+					{% csrf_token %}
+					<label for='review_text'>Add a Review:</label>
+					<textarea name='review_text' id='review_text'></textarea>
+					<label for='rating'>Rating:</label>
+					<input type='number' name='rating' id='rating' min='1' max='5' value=1>
+					<input type='submit' name='rating_submit' id='rating_submit' value='Submit Review'>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+.wrapper{
+	border:1px solid gray;
+	width:800px;
+}
+.form_container, .words_container{
+	display:inline-block;
+	vertical-align:top;
+	width:350px;
+	min-height:400px;
+}
+.words_container{
+    word-wrap: break-word;
+	border-left: 2px solid black;
+	padding-left:20px;
+}
+label{
+	width:150px;
+	margin-bottom:10px;
+}
+#new_word{
+	width:300px;
+    display:block;
+	margin-bottom:10px;
+}
+input[type="radio"]{
+	margin-left:15px;
+}
+
+ul{
+	list-style-type:none;
+}
+.form_container{
+	padding-left:20px;
+}
+#submit{
+	margin-left:75px;
+	margin-top:10px;
+	margin-right:300px;
+}
+.words_list p{
+	margin-bottom:10px;
+}
+.red{
+	color:red;
+}
+.blue{
+	color:blue;
+}
+.green{
+	color:green;
+}
+.big{
+    font-size:150%
+}
+.words_container a{
+	text-decoration:none;
+	color:white;
+	background-color:blue;
+	width:90px;
+	padding:5px;
+	border:1px solid black;
+	margin-top:30px;
+	margin-left:275px;
+	display:inline-block;
+}

@@ -1,0 +1,44 @@
+.gold_container, .activities_container, .locations{
+	padding:5px;
+	margin-left:50px;
+	margin-top: 25px
+}
+
+.gold_container p{
+	display:inline-block;
+	width:75px;
+}
+form{
+	width:75px;
+	display:inline-block;
+}
+.locations{
+	width:1100px;
+}
+.location{
+	height:175px;
+	width:200px;
+	margin-right:25px;
+	display:inline-block;
+	border:1px solid black;
+	text-align:center;
+}
+
+.activities_list{
+	border:1px solid black;
+    overflow-y: auto;
+	height:200px;
+	width:900px;
+	padding-top:5px;
+}
+.activities_list p{
+	margin:0;
+	padding:0;
+	margin-left:15px;
+}
+.won{
+	color:green;
+}
+.lost{
+	color:red;
+}

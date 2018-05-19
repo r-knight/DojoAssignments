@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<title>Amadon Checkout</title>
+        {% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static 'purchase_flow/css/checkout.css' %}">
+	</head>
+	<body>
+		<div class='wrapper'>
+			<h1>Thank you for your business</h1>
+			<div class='purchase_details'>
+				<p>We charged your credit card for {{request.session.order_total}}.</p>
+				<p>You have ordered {{request.session.total_items}} item(s) so far and spent {{request.session.total_purchase_amount}} with Amadon.com!</p>
+			</div>
+			<a href='/amadon'>Go back</a>
+		</div>
+	</body>
+</html>

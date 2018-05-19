@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+	<head>
+		<title>Login / Registration - Home</title>
+	</head>
+	<body>
+		<div class='wrapper'>
+			<div class='top_bar'>
+                {% if user.name %}
+					<h3>Welcome, {{user.name}}!</h3>
+                {% else %}
+					<h3>Welcome, guest!</h3>
+                {% endif %}
+				<a href='books/add'>Add Book and Review</a>
+				<a href='/users/logout'>Logout</a>
+			</div>
+			<div class='recent'>
+				<h3>Recent Book Reviews:</h3>
+				{% for review in recent%}
+					<div class='review'>
+						<a href='/{{review.book.id}}'>{{review.book.title}}</a>
+						<p>Rating: </p>
+						<p><a href='/users/{{review.reviewer.id}}'>{{review.reviewer.first_name}}</a> says: {{review.text}}</p>
+						<p>Posted on {{review.created_at}}</p>
+					</div>
+				{% endfor %}
+			</div>
+			<div class='other_books'>
+				<h3>Other Books With Reviews:</h3>
+				<div class='book_list'>
+					{% for book in books %}
+						<a href='books/{{book.id}}'>{{book.title}}</a>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

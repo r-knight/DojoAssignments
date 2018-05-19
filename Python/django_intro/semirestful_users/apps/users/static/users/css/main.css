@@ -1,0 +1,25 @@
+ul{
+	list-style-type: none;
+}
+li{
+	padding: 0px 5px;
+	display:table-cell;
+	border:1px solid black;
+	border-collapse:collapse;
+}
+
+.col1{
+	width:15px;
+}
+.col2{
+	width:250px;
+}
+.col3{
+	width:150px;
+}
+.col4{
+	width:120px;
+}
+.col5{
+	width:120px;
+}
