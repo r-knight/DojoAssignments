@@ -2,6 +2,10 @@
 
 <html lang='en'>
 	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 		<title>Login / Registration - Home</title>
 	</head>
 	<body>
@@ -15,27 +19,31 @@
 				<a href='books/add'>Add Book and Review</a>
 				<a href='/users/logout'>Logout</a>
 			</div>
-			<div class='recent'>
-				<h3>Recent Book Reviews:</h3>
-				{% for review in recent%}
-					<div class='review'>
-						<a href='/books/{{review.book.id}}'>{{review.book.title}}</a>
-						<p>Rating: {{review.rating}}/5</p>
-                        {% if not review.reviewer.id == 0 %}
-							<p>User <a href='/users/{{review.reviewer.id}}'>{{review.reviewer.alias}}</a> says: {{review.description}}</p>
-						{% else %}
-							<p> {{review.reviewer.alias}} user says: {{review.description}}</p>
-						{% endif %}
-						<p>Posted on {{review.created_at}}</p>
-					</div>
-				{% endfor %}
-			</div>
-			<div class='other_books'>
-				<h3>Other Books With Reviews:</h3>
-				<div class='book_list'>
-					{% for book in books %}
-						<a href='/books/{{book.id}}'>{{book.title}}</a>
+			<div class='row'>
+				<div class='recent container col-sm-7'>
+					<h3>Recent Book Reviews:</h3>
+					{% for review in recent%}
+						<div class='review card'>
+							<div class='card-body'>
+								<a href='/books/{{review.book.id}}'>{{review.book.title}}</a>
+								<p class='card-text'>Rating: {{review.rating}}/5</p>
+								{% if not review.reviewer.id == 0 %}
+									<p class='card-text'>User <a href='/users/{{review.reviewer.id}}'>{{review.reviewer.alias}}</a> says: {{review.description}}</p>
+								{% else %}
+									<p class='card-text'> {{review.reviewer.alias}} user says: {{review.description}}</p>
+								{% endif %}
+								<p>Posted on {{review.created_at}}</p>
+							</div>
+						</div>
 					{% endfor %}
+				</div>
+				<div class='other_books container col-sm-4'>
+					<h3>Other Books With Reviews:</h3>
+					<ul class='book_list'>
+						{% for book in books %}
+							<li><a href='/books/{{book.id}}'>{{book.title}}</a></li>
+						{% endfor %}
+					</ul>
 				</div>
 			</div>
 		</div>

@@ -6,5 +6,6 @@ urlpatterns = [
 	url(r'register', views.register),
 	url(r'success', views.success),
 	url(r'index', views.index),
+	url(r'flush_all', views.flush_all),
 	url(r'^', views.index),
 ]
